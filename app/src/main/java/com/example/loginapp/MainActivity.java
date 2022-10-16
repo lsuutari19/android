@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         TextView username = findViewById(R.id.username);
         TextView password = findViewById(R.id.password);
 
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         Button registerButton = (MaterialButton) findViewById(R.id.registerBtn);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 if(username.getText().toString().equals("admin") && password.getText().toString().equals("1234")){
@@ -35,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
                 else {
-                    Toast.makeText(MainActivity.this, "Login success!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Login failed!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -44,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Intent into a register page
+                Intent intent = new Intent(view.getContext(), RegisterActivity.class);
+                startActivity(intent);
             }
         });
     }

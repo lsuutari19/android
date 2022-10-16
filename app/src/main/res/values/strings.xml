@@ -14,4 +14,5 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="i_apos_m_screen_2_main2_xml">I\'m screen 2 (main2.xml)</string>
+    <string name="register">register</string>
 </resources>
